@@ -12,12 +12,6 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-resource "aws_ssm_parameter" "test" {
-  name  = "/dg/student/key/test/elie"
-  type  = "String"
-  value = "test1"
-}
-
 resource "aws_instance" "elie-dg-terraform-test" {
   ami           = "ami-0f58b397bc5c1f2e8" 
   tags = {
